@@ -1,14 +1,17 @@
 package nl.thecheerfuldev.noframeworkdi.service;
 
 import nl.thecheerfuldev.noframeworkdi.Chef;
-import nl.thecheerfuldev.noframeworkdi.DinerChef;
-import nl.thecheerfuldev.noframeworkdi.repository.InMemoryOrderRepository;
 import nl.thecheerfuldev.noframeworkdi.repository.OrderRepository;
 
 public class DinerRestaurantService implements RestaurantService {
 
-    private Chef chef = new DinerChef();
-    private OrderRepository orderRepository = new InMemoryOrderRepository();
+    private final Chef chef;
+    private final OrderRepository orderRepository;
+
+    public DinerRestaurantService(Chef chef, OrderRepository orderRepository) {
+        this.chef = chef;
+        this.orderRepository = orderRepository;
+    }
 
     public void takeOrder(String order) {
         chef.prepareOrder(order);
