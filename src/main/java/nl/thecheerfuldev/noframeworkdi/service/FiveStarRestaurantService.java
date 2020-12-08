@@ -1,4 +1,7 @@
-package nl.thecheerfuldev.noframeworkdi;
+package nl.thecheerfuldev.noframeworkdi.service;
+
+import nl.thecheerfuldev.noframeworkdi.Chef;
+import nl.thecheerfuldev.noframeworkdi.SousChef;
 
 public class FiveStarRestaurantService implements RestaurantService {
 
