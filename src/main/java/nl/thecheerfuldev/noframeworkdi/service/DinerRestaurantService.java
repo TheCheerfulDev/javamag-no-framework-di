@@ -10,6 +10,7 @@ public class DinerRestaurantService implements RestaurantService {
     private Chef chef = new DinerChef();
     private OrderRepository orderRepository = new InMemoryOrderRepository();
 
+    @Override
     public void takeOrder(String order) {
         chef.prepareOrder(order);
         orderRepository.save(order);
