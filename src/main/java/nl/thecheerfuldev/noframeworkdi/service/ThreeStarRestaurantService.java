@@ -5,18 +5,18 @@ import nl.thecheerfuldev.noframeworkdi.SousChef;
 import nl.thecheerfuldev.noframeworkdi.repository.InMemoryOrderRepository;
 import nl.thecheerfuldev.noframeworkdi.repository.OrderRepository;
 
-public class FiveStarRestaurantService implements RestaurantService {
+public class ThreeStarRestaurantService implements RestaurantService {
 
     private final Chef chef;
     private final OrderRepository orderRepository;
 
-    public FiveStarRestaurantService(Chef chef, OrderRepository orderRepository) {
+    public ThreeStarRestaurantService(Chef chef, OrderRepository orderRepository) {
         this.chef = chef;
         this.orderRepository = orderRepository;
     }
 
-    public static FiveStarRestaurantService getInstance() {
-        return new FiveStarRestaurantService(new SousChef(), new InMemoryOrderRepository());
+    public static ThreeStarRestaurantService getInstance() {
+        return new ThreeStarRestaurantService(new SousChef(), new InMemoryOrderRepository());
     }
 
     public void takeOrder(String order) {
