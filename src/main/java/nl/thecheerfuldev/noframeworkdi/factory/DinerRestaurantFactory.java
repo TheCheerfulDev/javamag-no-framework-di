@@ -10,14 +10,14 @@ import nl.thecheerfuldev.noframeworkdi.service.RestaurantService;
 public class DinerRestaurantFactory {
 
     public static RestaurantService createRestaurantService() {
-        return new DinerRestaurantService(getDinerChef(), createOrderRepository());
+        return new DinerRestaurantService(createChef(), createOrderRepository());
     }
 
     public static OrderRepository createOrderRepository() {
         return new InMemoryOrderRepository();
     }
 
-    public static Chef getDinerChef() {
+    public static Chef createChef() {
         return new DinerChef();
     }
 }
