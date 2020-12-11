@@ -10,7 +10,7 @@ public class ThreeStarRestaurantService implements RestaurantService {
     private final Chef chef;
     private final OrderRepository orderRepository;
 
-    public ThreeStarRestaurantService(Chef chef, OrderRepository orderRepository) {
+    ThreeStarRestaurantService(Chef chef, OrderRepository orderRepository) {
         this.chef = chef;
         this.orderRepository = orderRepository;
     }
